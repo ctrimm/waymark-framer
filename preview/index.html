@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Waymark — one link page, five styles</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;1,700&family=Manrope:wght@400;600;700;800&family=Archivo:wght@700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Manrope',sans-serif; background:#E9E2D4; color:#221C14; }
+
+  /* ---------- switcher chrome (hidden in bare mode) ---------- */
+  .chrome { max-width:880px; margin:0 auto; padding:34px 20px 6px; text-align:center; }
+  .chrome h1 { font-family:'Fraunces',serif; font-size:30px; }
+  .chrome h1 em { color:#B3401E; }
+  .chrome p { color:#6B5D49; font-size:14.5px; margin-top:8px; line-height:1.55; }
+  .switcher { display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin:18px 0 4px; }
+  .switcher button { font:700 13px 'Manrope'; padding:9px 16px; border-radius:999px; border:1.5px solid #221C14; background:#FFFDF6; cursor:pointer; }
+  .switcher button.active { background:#221C14; color:#FAF5EC; }
+  .chrome .hint { font-size:12.5px; color:#8A7B64; margin-top:10px; }
+  body.bare .chrome { display:none; }
+
+  /* ---------- the link page ---------- */
+  .stage { padding:26px 16px 44px; }
+  body.bare .stage { padding:0; }
+  .page {
+    --bg:#1C1412; --surface:#2A1D18; --ink:#F1E8D8; --muted:#A08B6D;
+    --accent:#C98A4B; --onaccent:#1C1412; --border:rgba(201,138,75,.45);
+    --radius:14px; --namefont:'Fraunces',serif; --uifont:'Manrope',sans-serif;
+    --shadow:none; --borderw:1px;
+    max-width:430px; margin:0 auto; background:var(--bg); color:var(--ink);
+    border-radius:26px; padding:44px 28px 30px; font-family:var(--uifont);
+    transition:background .25s;
+  }
+  body.bare .page { border-radius:0; min-height:100vh; }
+  .page[data-theme="vermilion"] { --bg:#F8F3EC; --surface:#FFFDF8; --ink:#201713; --muted:#6E5D4F; --accent:#B3401E; --onaccent:#F8F3EC; --border:rgba(32,23,19,.2); --radius:4px; }
+  .page[data-theme="crumb"]     { --bg:#FAF5EC; --surface:#FFFDF6; --ink:#2B1D11; --muted:#7A5F45; --accent:#9C4415; --onaccent:#FAF5EC; --border:rgba(156,68,21,.3); --radius:20px; --shadow:0 6px 18px rgba(156,68,21,.12); }
+  .page[data-theme="ledger"]    { --bg:#FAF7F1; --surface:#FFFFFF; --ink:#171512; --muted:#5F6A61; --accent:#1B5E43; --onaccent:#FAF7F1; --border:rgba(27,94,67,.28); --radius:10px; }
+  .page[data-theme="brutalist"] { --bg:#FFFFFF; --surface:#FFFFFF; --ink:#111111; --muted:#555555; --accent:#FFD02E; --onaccent:#111111; --border:#111111; --radius:0; --borderw:2px; --shadow:4px 4px 0 #111111; --namefont:'Archivo',sans-serif; --uifont:'Space Mono',monospace; }
+
+  .avatar { width:86px; height:86px; border-radius:50%; margin:0 auto 16px; display:flex; align-items:center; justify-content:center;
+    font-family:var(--namefont); font-weight:700; font-size:30px; background:var(--surface); color:var(--accent);
+    border:2px solid var(--accent); }
+  .page[data-theme="brutalist"] .avatar { border-radius:0; border:2px solid #111; box-shadow:4px 4px 0 #111; background:var(--accent); color:#111; }
+  .name { font-family:var(--namefont); font-weight:700; font-size:29px; text-align:center; line-height:1.15; }
+  .page[data-theme="vermilion"] .name { font-style:italic; }
+  .page[data-theme="brutalist"] .name { text-transform:uppercase; letter-spacing:.01em; font-size:26px; }
+  .role { text-align:center; font-weight:700; font-size:14.5px; margin-top:7px; }
+  .page[data-theme="ledger"] .role { text-transform:uppercase; letter-spacing:.14em; font-size:12px; color:var(--accent); }
+  .page[data-theme="brutalist"] .role { text-transform:uppercase; font-size:12.5px; }
+  .loc { text-align:center; color:var(--muted); font-size:12.5px; margin-top:4px; letter-spacing:.06em; }
+  .bio { text-align:center; color:var(--muted); font-size:14.5px; line-height:1.6; margin:14px auto 0; max-width:320px; }
+  .page[data-theme="nocturne"] .bio, .page[data-theme="vermilion"] .bio, .page[data-theme="crumb"] .bio, .page[data-theme="ledger"] .bio { color:var(--ink); opacity:.78; }
+  .page[data-theme="nocturne"] .bio { color:var(--muted); opacity:1; }
+
+  .socials { display:flex; gap:8px; justify-content:center; margin:20px 0 26px; flex-wrap:wrap; }
+  .socials a { font-size:12px; font-weight:700; letter-spacing:.05em; color:var(--ink); text-decoration:none;
+    border:var(--borderw) solid var(--border); border-radius:999px; padding:7px 13px; background:transparent; }
+  .page[data-theme="brutalist"] .socials a { border-radius:0; border-color:#111; text-transform:uppercase; }
+
+  .links { display:flex; flex-direction:column; gap:12px; }
+  .link { display:flex; align-items:center; gap:12px; text-decoration:none; background:var(--surface); color:var(--ink);
+    border:var(--borderw) solid var(--border); border-radius:var(--radius); padding:15px 18px; box-shadow:var(--shadow); }
+  .link .num { display:none; font-weight:700; color:var(--accent); font-size:13px; }
+  .page[data-theme="vermilion"] .link .num { display:block; }
+  .link .txt { flex:1; }
+  .link .label { font-weight:800; font-size:15.5px; display:block; }
+  .page[data-theme="brutalist"] .link .label { text-transform:uppercase; font-size:14px; }
+  .link .note { font-size:12.5px; color:var(--muted); display:block; margin-top:2px; }
+  .link.hl { background:var(--accent); color:var(--onaccent); border-color:var(--accent); }
+  .link.hl .note { color:var(--onaccent); opacity:.75; }
+  .link.hl .num { color:var(--onaccent); }
+  .link .arr { font-weight:800; }
+  .badge { text-align:center; margin-top:28px; font-size:11.5px; color:var(--muted); }
+  .badge a { color:var(--muted); }
+</style>
+</head>
+<body>
+  <div class="chrome">
+    <h1>Waymark — one link page, <em>five styles</em></h1>
+    <p>The preview of the free Framer template. Same profile, same links — click a style.
+       In Framer this is exactly how switching works: your content lives in the CMS once,
+       and each style is a page (or a component variant) reading from it.</p>
+    <div class="switcher" id="switcher">
+      <button data-style="nocturne" class="active">Nocturne</button>
+      <button data-style="vermilion">Vermilion</button>
+      <button data-style="crumb">Crumb</button>
+      <button data-style="ledger">Ledger</button>
+      <button data-style="brutalist">Brutalist</button>
+    </div>
+    <p class="hint">Demo persona: June Calloway, illustrator &amp; printmaker — fictional, like all demo content in the template.</p>
+  </div>
+
+  <div class="stage">
+    <div class="page" data-theme="nocturne" id="page">
+      <div class="avatar">JC</div>
+      <div class="name">June Calloway</div>
+      <div class="role">Illustrator &amp; printmaker</div>
+      <div class="loc">SAVANNAH, GA</div>
+      <p class="bio">Prints, posters and the occasional mural. New work most Fridays.</p>
+      <div class="socials">
+        <a href="https://example.com">Instagram</a><a href="https://example.com">YouTube</a><a href="https://example.com">Pinterest</a><a href="mailto:hello@example.com">Email</a>
+      </div>
+      <div class="links">
+        <a class="link hl" href="https://example.com/portfolio"><span class="num">01</span><span class="txt"><span class="label">Portfolio</span><span class="note">Selected work 2023–2026</span></span><span class="arr">→</span></a>
+        <a class="link" href="https://example.com/shop"><span class="num">02</span><span class="txt"><span class="label">Shop prints</span><span class="note">Open editions from $40</span></span><span class="arr">→</span></a>
+        <a class="link" href="https://example.com/autumn"><span class="num">03</span><span class="txt"><span class="label">New — the Autumn series</span><span class="note">Four prints · until Nov 30</span></span><span class="arr">→</span></a>
+        <a class="link" href="https://example.com/newsletter"><span class="num">04</span><span class="txt"><span class="label">The Margin — my newsletter</span><span class="note">One letter a month</span></span><span class="arr">→</span></a>
+        <a class="link" href="https://example.com/commissions"><span class="num">05</span><span class="txt"><span class="label">Commissions</span><span class="note">Books open for January</span></span><span class="arr">→</span></a>
+        <a class="link" href="https://example.com/about"><span class="num">06</span><span class="txt"><span class="label">About &amp; process</span><span class="note">How a print gets made</span></span><span class="arr">→</span></a>
+        <a class="link" href="mailto:hello@example.com"><span class="num">07</span><span class="txt"><span class="label">Say hello</span><span class="note">Replies within a few days</span></span><span class="arr">→</span></a>
+      </div>
+      <p class="badge">Made with <a href="https://www.framer.com/marketplace/">Waymark</a> — a free Framer template · <a href="https://www.framer.com/marketplace/">New here? Start here</a></p>
+    </div>
+  </div>
+
+<script>
+  const page = document.getElementById('page');
+  const params = new URLSearchParams(location.search);
+  function setStyle(s) {
+    page.dataset.theme = s;
+    document.querySelectorAll('#switcher button').forEach(b => b.classList.toggle('active', b.dataset.style === s));
+    const u = new URL(location); u.searchParams.set('style', s); history.replaceState(null, '', u);
+  }
+  document.querySelectorAll('#switcher button').forEach(b => b.addEventListener('click', () => setStyle(b.dataset.style)));
+  if (params.get('bare') === '1') document.body.classList.add('bare');
+  if (params.get('style')) setStyle(params.get('style'));
+</script>
+</body>
+</html>
