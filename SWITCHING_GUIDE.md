@@ -10,7 +10,7 @@ written for the buyer, in plain language.*
 
 Your name, bio and links live in **one place**: the CMS collections
 called **Profile** and **Links**. Every style page reads from those
-same collections. So you edit your content **once**, and all five
+same collections. So you edit your content **once**, and all ten
 styles instantly show *your* page — you pick the look you like
 best, and you can change your mind any time without re-typing
 anything.
@@ -19,11 +19,12 @@ anything.
 
 1. Open the **CMS** (left sidebar) → **Profile** and **Links**.
    Replace the demo content with yours.
-2. Click through the five style pages — **Nocturne, Vermilion,
-   Crumb, Ledger, Brutalist** — and look at your page in each.
+2. Click through the ten style pages — **Nocturne, Vermilion,
+   Crumb, Ledger, Brutalist, Dev, Glassy, Pastel, Resume,
+   Retro** — and look at your page in each.
 3. On the page you want: open its **Page Settings** and set its
    route to `/`. Framer moves the home page to your pick.
-4. Delete the other four style pages (or keep them — unpublished
+4. Delete the other nine style pages (or keep them — unpublished
    pages cost nothing, and you can re-test a new look later).
 5. **Publish.**
 
@@ -33,7 +34,7 @@ page. Your links never move.
 ## Method 2 — Flip the Style variant
 
 Every building block (Profile Card, Link Button, Socials Row) has a
-**Style** property with the five looks as variants.
+**Style** property with the ten looks as variants.
 
 1. Select the block on any page.
 2. In the right-hand properties panel, change **Style** from, say,
@@ -55,7 +56,7 @@ and every block using it updates:
 - Swap the display font (all styles use free Google fonts:
   Fraunces, Manrope, Archivo, Space Mono).
 - Keep text readable: body text should stay at least 4.5:1
-  contrast against its background — all five stock styles pass.
+  contrast against its background — all ten stock styles pass.
 
 ## Everyday tasks
 
@@ -69,7 +70,7 @@ and every block using it updates:
 | Remove the footer badge | Select it on your home page → Delete. No hard feelings. |
 | Custom domain | Site Settings → Site Domains (a Framer plan feature) |
 
-## The five styles
+## The ten styles
 
 | Style | Background | Accent | Type | The full version |
 |---|---|---|---|---|
@@ -78,6 +79,11 @@ and every block using it updates:
 | Crumb | `#FAF5EC` cream | `#9C4415` burnt crust | Fraunces + Manrope | **Crumb Culture** — the bakery/café template |
 | Ledger | `#FAF7F1` paper | `#1B5E43` ledger green | Fraunces + Manrope | **Wagesmith** — payroll & SaaS, done warmly |
 | Brutalist | `#FFFFFF` white | `#FFD02E` signal yellow | Archivo + Space Mono | From the original Astro link-in-bio theme |
+| Dev | `#0B0E14` terminal black | `#4ADE80` terminal green | Space Mono | From the original Astro theme — the developer look |
+| Glassy | `#0F172A` deep slate + aurora gradient | `#7DD3FC` sky | Fraunces + Manrope | From the original Astro theme — glass over a night city |
+| Pastel | watercolor wash (peach → blush → lavender) | `#C2542F` terracotta | Fraunces + Manrope | From the original Astro theme — the watercolor look |
+| Resume | `#F1F5F9` slate tint | `#1E40AF` professional blue | Archivo + Manrope | From the original Astro theme — the CV look |
+| Retro | `#07070D` black + grid | `#22D3EE` cyan / `#FF5DA2` pink highlight | Archivo + Space Mono | From the original Astro theme — synthwave grid |
 
 ## Fine print
 

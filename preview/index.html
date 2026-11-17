@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Waymark — one link page, five styles</title>
+<title>Waymark — one link page, ten styles</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;1,700&family=Manrope:wght@400;600;700;800&family=Archivo:wght@700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
@@ -38,6 +38,23 @@
   .page[data-theme="crumb"]     { --bg:#FAF5EC; --surface:#FFFDF6; --ink:#2B1D11; --muted:#7A5F45; --accent:#9C4415; --onaccent:#FAF5EC; --border:rgba(156,68,21,.3); --radius:20px; --shadow:0 6px 18px rgba(156,68,21,.12); }
   .page[data-theme="ledger"]    { --bg:#FAF7F1; --surface:#FFFFFF; --ink:#171512; --muted:#5F6A61; --accent:#1B5E43; --onaccent:#FAF7F1; --border:rgba(27,94,67,.28); --radius:10px; }
   .page[data-theme="brutalist"] { --bg:#FFFFFF; --surface:#FFFFFF; --ink:#111111; --muted:#555555; --accent:#FFD02E; --onaccent:#111111; --border:#111111; --radius:0; --borderw:2px; --shadow:4px 4px 0 #111111; --namefont:'Archivo',sans-serif; --uifont:'Space Mono',monospace; }
+  .page[data-theme="dev"]    { --bg:#0B0E14; --surface:#131A24; --ink:#E6EDF3; --muted:#8B98A9; --accent:#4ADE80; --onaccent:#0B0E14; --border:#26303E; --radius:6px; --namefont:'Space Mono',monospace; --uifont:'Space Mono',monospace; }
+  .page[data-theme="glassy"] { --surface:rgba(255,255,255,.09); --ink:#FFFFFF; --muted:#C3CAD9; --accent:#7DD3FC; --onaccent:#0F172A; --border:rgba(255,255,255,.25); --radius:18px;
+    background:radial-gradient(600px 300px at 15% -5%, rgba(124,58,237,.55), rgba(124,58,237,0) 60%), radial-gradient(520px 280px at 95% 28%, rgba(14,165,233,.42), rgba(14,165,233,0) 60%), linear-gradient(170deg,#131E33,#0B1120); }
+  .page[data-theme="pastel"] { --surface:#FFFFFF; --ink:#473A32; --muted:#755C4C; --accent:#C2542F; --onaccent:#FFFFFF; --border:rgba(199,84,47,.25); --radius:24px; --shadow:0 8px 22px rgba(199,84,47,.10);
+    background:linear-gradient(165deg,#FDEEE3,#FBE7EE 55%,#EFE9FB); }
+  .page[data-theme="resume"] { --bg:#F1F5F9; --surface:#FFFFFF; --ink:#17222E; --muted:#5B6B7B; --accent:#1E40AF; --onaccent:#FFFFFF; --border:#D9DEE5; --radius:3px; --namefont:'Archivo',sans-serif; }
+  .page[data-theme="retro"]  { --surface:#101018; --ink:#EDEDF2; --muted:#9D9DB0; --accent:#22D3EE; --onaccent:#0A0A0F; --border:#26263A; --radius:8px; --namefont:'Archivo',sans-serif; --uifont:'Space Mono',monospace;
+    background-color:#07070D; background-image:linear-gradient(rgba(255,255,255,.05) 1px, rgba(255,255,255,0) 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, rgba(255,255,255,0) 1px); background-size:28px 28px; }
+  .page[data-theme="dev"] .role::before { content:"// "; color:var(--accent); }
+  .page[data-theme="dev"] .avatar { border-radius:10px; }
+  .page[data-theme="glassy"] .link { backdrop-filter:blur(6px); }
+  .page[data-theme="glassy"] .avatar { background:rgba(255,255,255,.10); }
+  .page[data-theme="resume"] .role { text-transform:uppercase; letter-spacing:.14em; font-size:12px; color:var(--accent); }
+  .page[data-theme="retro"] .name { text-transform:uppercase; }
+  .page[data-theme="retro"] .avatar { border-color:#FF5DA2; color:var(--accent); }
+  .page[data-theme="retro"] .link.hl { background:#FF5DA2; border-color:#FF5DA2; color:#0A0A0F; }
+  .page[data-theme="retro"] .link.hl .note { color:#0A0A0F; }
 
   .avatar { width:86px; height:86px; border-radius:50%; margin:0 auto 16px; display:flex; align-items:center; justify-content:center;
     font-family:var(--namefont); font-weight:700; font-size:30px; background:var(--surface); color:var(--accent);
@@ -51,7 +68,7 @@
   .page[data-theme="brutalist"] .role { text-transform:uppercase; font-size:12.5px; }
   .loc { text-align:center; color:var(--muted); font-size:12.5px; margin-top:4px; letter-spacing:.06em; }
   .bio { text-align:center; color:var(--muted); font-size:14.5px; line-height:1.6; margin:14px auto 0; max-width:320px; }
-  .page[data-theme="nocturne"] .bio, .page[data-theme="vermilion"] .bio, .page[data-theme="crumb"] .bio, .page[data-theme="ledger"] .bio { color:var(--ink); opacity:.78; }
+  .page[data-theme="nocturne"] .bio, .page[data-theme="vermilion"] .bio, .page[data-theme="crumb"] .bio, .page[data-theme="ledger"] .bio, .page[data-theme="pastel"] .bio, .page[data-theme="resume"] .bio { color:var(--ink); opacity:.78; }
   .page[data-theme="nocturne"] .bio { color:var(--muted); opacity:1; }
 
   .socials { display:flex; gap:8px; justify-content:center; margin:20px 0 26px; flex-wrap:wrap; }
@@ -78,7 +95,7 @@
 </head>
 <body>
   <div class="chrome">
-    <h1>Waymark — one link page, <em>five styles</em></h1>
+    <h1>Waymark — one link page, <em>ten styles</em></h1>
     <p>The preview of the free Framer template. Same profile, same links — click a style.
        In Framer this is exactly how switching works: your content lives in the CMS once,
        and each style is a page (or a component variant) reading from it.</p>
@@ -88,6 +105,11 @@
       <button data-style="crumb">Crumb</button>
       <button data-style="ledger">Ledger</button>
       <button data-style="brutalist">Brutalist</button>
+      <button data-style="dev">Dev</button>
+      <button data-style="glassy">Glassy</button>
+      <button data-style="pastel">Pastel</button>
+      <button data-style="resume">Resume</button>
+      <button data-style="retro">Retro</button>
     </div>
     <p class="hint">Demo persona: June Calloway, illustrator &amp; printmaker — fictional, like all demo content in the template.</p>
   </div>

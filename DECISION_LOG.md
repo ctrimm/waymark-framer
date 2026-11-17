@@ -55,6 +55,23 @@ Framer referral share (50% of a referred subscription's first
 year) + paid-catalog discovery. Listing states "as-is, no
 support" — at free, support time would eat the sprint.
 
+## D6 — The five originals restored as riffs (2026-11-17, Cory's call)
+
+Cory directed adding the Astro original's remaining looks back —
+D2's drop is superseded. Dev, Glassy, Pastel, Resume and Retro
+join as **riffs**, not ports: each is grounded in its original
+config (Glassy's dark slate + backdrop image, Pastel's watercolor
+wash, Retro's black + retro-grid + neon palette, Resume's slate
+professionalism, Dev's code-first identity) and rebuilt to the
+Waymark token standard — every text pair re-verified ≥ 4.5:1
+(Pastel's muted needed darkening to `#755C4C`, 5.46:1, to pass).
+Ten styles total. The original's eighth variant, Modern, stays
+out: it was the default baseline look, not a style. Cost of the
+change: component variant count doubles (20 Link Button states)
+and the in-Framer build estimate rises to 60–75 minutes — worth
+it, per Cory: more options is the point of a link-in-bio template,
+and the originals are what the Astro theme's 19★ audience knows.
+
 ## D5 — Sequencing note (2026-11-17)
 
 Built before the paid listings are live in Framer (Cory's call,

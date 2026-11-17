@@ -8,7 +8,7 @@ design language, and the in-template guide names them.
 
 ---
 
-**Name:** Waymark — Link in Bio (5 switchable styles)
+**Name:** Waymark — Link in Bio (10 switchable styles)
 
 **Byline:** Cory Trimm
 
@@ -16,8 +16,8 @@ design language, and the in-template guide names them.
 
 **Tagline (short description):**
 
-> One link page, five looks. Waymark keeps your name, bio and
-> links in one place — preview them in all five styles, pick the
+> One link page, ten looks. Waymark keeps your name, bio and
+> links in one place — preview them in all ten styles, pick the
 > one that's you, and switch any time without re-typing a thing.
 
 **Description:**
@@ -25,13 +25,17 @@ design language, and the in-template guide names them.
 > Most link-in-bio templates make you choose a look before you've
 > seen your own page in it. Waymark flips that.
 >
-> Your profile and links live in the CMS — one place. Five style
+> Your profile and links live in the CMS — one place. Ten style
 > pages read from it: **Nocturne** (dark, copper, editorial),
 > **Vermilion** (paper, red, numbered), **Crumb** (warm, soft,
 > friendly), **Ledger** (clean green, all business) and
-> **Brutalist** (black, white, signal yellow, zero subtlety).
-> Fill in your links once, click through your page in all five
-> looks, set the winner as your home page, publish.
+> **Brutalist** (black, white, signal yellow, zero subtlety) —
+> plus the five looks from the original Astro theme, reimagined:
+> **Dev** (terminal dark, mono, green), **Glassy** (frosted glass
+> over a night sky), **Pastel** (watercolor wash, soft cards),
+> **Resume** (the clean CV look) and **Retro** (synthwave grid,
+> neon pink and cyan). Fill in your links once, click through
+> your page in all ten looks, set the winner as home, publish.
 >
 > Changing your mind later takes a minute, because your content
 > never moves. A built-in **Start here** page walks you through
@@ -46,7 +50,7 @@ design language, and the in-template guide names them.
 
 **What's included (bullets for the listing's feature list):**
 
-- 5 complete styles, one project
+- 10 complete styles, one project
 - CMS-driven Profile + Links — edit once, restyle freely
 - Highlight any link with one toggle
 - "Start here" page: the full switching guide, inside the template
@@ -55,12 +59,17 @@ design language, and the in-template guide names them.
 
 **Images to upload (from `marketplace/`):**
 
-1. `01-switcher.png` — the five styles side by side (hero image)
+1. `01-switcher.png` — the style switcher with Nocturne active (hero image)
 2. `02-nocturne.png`
 3. `03-vermilion.png`
 4. `04-crumb.png`
 5. `05-ledger.png`
 6. `06-brutalist.png`
+7. `07-dev.png`
+8. `08-glassy.png`
+9. `09-pastel.png`
+10. `10-resume.png`
+11. `11-retro.png`
 
 **Preview URL:** the published preview site from the build (home =
 Nocturne style).

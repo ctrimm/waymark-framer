@@ -1,11 +1,11 @@
 # Waymark — Framer Build Spec
 
 Build this in Framer exactly as specified, then work the
-SUBMISSION_CHECKLIST. Estimated build time: **45–60 minutes** (the
-components do the heavy lifting — five pages assemble from three
+SUBMISSION_CHECKLIST. Estimated build time: **60–75 minutes** (the
+components do the heavy lifting — ten pages assemble from three
 components).
 
-**The product in one line:** a free link-in-bio template with five
+**The product in one line:** a free link-in-bio template with ten
 switchable styles, where all content lives in CMS so the buyer
 previews every style with their own links before choosing.
 
@@ -24,14 +24,14 @@ previews every style with their own links before choosing.
 
 ## 2. Components (build these first)
 
-### Profile Card — 5 variants (Style: Nocturne / Vermilion / Crumb / Ledger / Brutalist)
+### Profile Card — 10 variants (Style: Nocturne / Vermilion / Crumb / Ledger / Brutalist / Dev / Glassy / Pastel / Resume / Retro)
 
 One vertical stack, centred: Avatar (CMS image, initials fallback),
 Name (H1), Role, Location (small caps), Bio, Socials Row (nested
 component). All text bound to the **Profile** collection's single
 item. Per-variant styling per the token table in §3.
 
-### Link Button — 5 variants × Highlight on/off (10 states)
+### Link Button — 10 variants × Highlight on/off (20 states)
 
 Full-width row bound to the **Links** collection (used inside a CMS
 list, sorted by Sort ascending): Label (semibold), Note (small,
@@ -39,7 +39,7 @@ muted), arrow "→" at right. Highlight ON = accent fill + on-accent
 text. Hover: translateY(-1px) + border/accent deepens (skip on
 Brutalist — hover swaps shadow from 4px to 6px offset).
 
-### Socials Row — 5 variants
+### Socials Row — 10 variants
 
 Four text-labelled pill buttons (Instagram / YouTube / Pinterest /
 Email in the demo) with editable link + label properties. Text
@@ -68,9 +68,26 @@ the guide tells buyers they may delete it.
 | UI font | Manrope | Manrope | Manrope | Manrope | Space Mono |
 | Signature | copper ring avatar, arch top on highlight button | numbered links (01–07, Space Mono… use Manrope 700) | pill buttons, soft shadow | small-caps labels, ruled top border on card | hard shadows, uppercase labels |
 
-All text/background pairs verified ≥ 4.5:1 (worst case: Vermilion
-accent on paper, 5.18:1). Do not introduce new pairs without
-checking.
+All text/background pairs verified ≥ 4.5:1 across all ten styles
+(worst case: Pastel accent on white, 4.56:1). Do not introduce
+new pairs without checking.
+
+The five originals (riffs of the Astro theme's looks, DECISION_LOG D6):
+
+| Token | Dev | Glassy | Pastel | Resume | Retro |
+|---|---|---|---|---|---|
+| Page BG | `#0B0E14` | `#0F172A` + aurora gradient (violet top-left, sky right) | watercolor wash gradient `#FDEEE3` → `#FBE7EE` → `#EFE9FB` | `#F1F5F9` | `#07070D` + 28px grid lines, white 5% |
+| Surface | `#131A24` | white 9% + blur 6px | `#FFFFFF` | `#FFFFFF` | `#101018` |
+| Text | `#E6EDF3` | `#FFFFFF` | `#473A32` | `#17222E` | `#EDEDF2` |
+| Muted | `#8B98A9` | `#C3CAD9` | `#755C4C` | `#5B6B7B` | `#9D9DB0` |
+| Accent | `#4ADE80` | `#7DD3FC` | `#C2542F` | `#1E40AF` | `#22D3EE` (highlight fill: `#FF5DA2`) |
+| On-accent | `#0B0E14` | `#0F172A` | `#FFFFFF` | `#FFFFFF` | `#0A0A0F` |
+| Border | `#26303E` | white 25% | `#C2542F` 25% | `#D9DEE5` | `#26263A` |
+| Radius | 6px | 18px | 24px | 3px | 8px |
+| Shadow | none | none | soft terracotta | none | none |
+| Name font | Space Mono 700 | Fraunces 700 | Fraunces 700 | Archivo 700 | Archivo 800 upper |
+| UI font | Space Mono | Manrope | Manrope | Manrope | Space Mono |
+| Signature | role line prefixed `//` in accent; square-ish avatar (10px radius) | frosted cards (surface blur is required, not optional) | the wash is the identity — never a flat BG | role in accent small caps; hairline rows, no shadows | avatar ring in pink `#FF5DA2`, initials in cyan; highlight button is pink, not cyan |
 
 Create matching **Color Styles** per style (`Nocturne / BG`, …) and
 apply them — Method 3 in the guide depends on styles existing, not
@@ -86,6 +103,11 @@ raw hex on frames.
 | Crumb | `/crumb` | Same, Crumb variants |
 | Ledger | `/ledger` | Same, Ledger variants |
 | Brutalist | `/brutalist` | Same, Brutalist variants |
+| Dev | `/dev` | Same, Dev variants |
+| Glassy | `/glassy` | Same, Glassy variants |
+| Pastel | `/pastel` | Same, Pastel variants |
+| Resume | `/resume` | Same, Resume variants |
+| Retro | `/retro` | Same, Retro variants |
 | 404 | custom | "This link wandered off." + button to home, Ledger styling |
 
 Set **Nocturne** as the home page (`/`) for the listing preview —
@@ -108,5 +130,6 @@ Method 1.
 
 - No CMS collection pages (single-page template).
 - No code components, no analytics embeds, no cookie anything.
-- No sixth style. The original Astro theme's Dev / Glassy / Pastel
-  / Resume / Retro looks are deliberately out (DECISION_LOG D2).
+- No eleventh style. The original Astro theme's Modern (its
+  default look) is the one variant not ported — it was the
+  generic baseline, not a look. (DECISION_LOG D2, D6.)

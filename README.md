@@ -1,4 +1,4 @@
-# Waymark — a free Framer link-in-bio template with five switchable styles
+# Waymark — a free Framer link-in-bio template with ten switchable styles
 
 **Status: build package complete; the in-Framer build is the
 remaining step.** This repo is the full template package — build
@@ -29,12 +29,22 @@ reading from it):
 
 ![Brutalist style](marketplace/06-brutalist.png)
 
+![Dev style](marketplace/07-dev.png)
+
+![Glassy style](marketplace/08-glassy.png)
+
+![Pastel style](marketplace/09-pastel.png)
+
+![Resume style](marketplace/10-resume.png)
+
+![Retro style](marketplace/11-retro.png)
+
 ## The idea
 
 Most link-in-bio templates make you pick a look before you've seen
 your own page in it. Waymark keeps the profile and links in the
-CMS — one place — and ships five style pages that all read from
-it. Fill in your links once, preview your page in all five looks,
+CMS — one place — and ships ten style pages that all read from
+it. Fill in your links once, preview your page in all ten looks,
 set the winner as home, publish. Switching later takes a minute
 because the content never moves.
 
@@ -45,13 +55,18 @@ because the content never moves.
 | **Crumb** | cream + burnt crust, warm pills | Crumb Culture (bakery/café) |
 | **Ledger** | paper + ledger green, small caps | Wagesmith (payroll/SaaS, $79) |
 | **Brutalist** | black/white + signal yellow, hard shadows | the original Astro theme's signature look |
+| **Dev** | terminal black + green, all mono | the original Astro theme, riffed |
+| **Glassy** | frosted glass over a night-sky gradient | the original Astro theme, riffed |
+| **Pastel** | watercolor wash, soft white cards | the original Astro theme, riffed |
+| **Resume** | slate + professional blue, hairline rows | the original Astro theme, riffed |
+| **Retro** | black grid, neon cyan + pink | the original Astro theme, riffed |
 
 ## Switching, three ways (the guide in one paragraph)
 
-1. **Pick a page** — preview all five with your content, set one
+1. **Pick a page** — preview all ten with your content, set one
    as home. Zero skill required.
 2. **Flip a variant** — Profile Card, Link Button and Socials Row
-   each carry all five styles as a variant property; re-skin a
+   each carry all ten styles as a variant property; re-skin a
    page in place.
 3. **Edit the styles** — every token exists as a named Color/Text
    Style per look; change the style, change the look.
