@@ -69,3 +69,21 @@ Holier (sushi/modern) $49, Terrona (farm-to-table) $49, Bamzi $29,
 Gusto (upscale/Italian) $79. Nocturne at **$59** sits premium-mid:
 above the generic $49 tier on the strength of 5 CMS collections,
 events + journal systems the $49 tier lacks, and below Gusto's $79.
+
+## Re-check — 2026-11-19
+
+Re-read live (best practices via the help centre page itself;
+publish guide likewise):
+
+- **Template best practices** — page version updated 2026-09-15.
+  Substance unchanged from the 2026-11-16 retrieval above; every
+  item is still the checklist this package was built against.
+- **How to publish a template** — page version updated 2026-10-27.
+  Re-confirms: publish is immediate, no review, creators keep
+  100%, free templates earn affiliate income. Submission fields
+  unchanged. Discovery tips on that page: descriptive byline,
+  high-quality screenshots, accurate categories, **research
+  similar templates before pricing** (done — see DECISION_LOG),
+  and an **optional Community feed post with a personal message**
+  at publish time — now in the checklist, with a draft post in
+  MARKETPLACE_LISTING.md.

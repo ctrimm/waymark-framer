@@ -122,6 +122,16 @@ Method 1.
   paths; "Say hello" is a real mailto:).
 - Favicon: a simple signpost glyph — draw with two rotated frames
   on a square, accent yellow on black works across styles.
+- **Alt text:** the Profile avatar image carries alt text
+  ("[Name]'s photo"); the initials fallback is decorative text,
+  no alt needed. Any image a buyer adds follows the same rule.
+- **Per-page title + description:** set in Page Settings for all
+  ten style pages, the Start here page, and the 404 — Framer's
+  accessibility guidance asks for it on every page, not just home.
+- No Framer **Layout** on purpose: every page is the same three
+  components in one column, so a Layout layer would add structure
+  without saving a single edit. (Best practice says "where
+  appropriate" — here it isn't.)
 - Site title: "Waymark — link in bio"; each style page's SEO title
   "Your name — links" placeholder via CMS binding where Framer
   allows, else static "June Calloway — links".

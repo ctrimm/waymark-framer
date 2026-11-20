@@ -74,3 +74,13 @@ design language, and the in-template guide names them.
 **Preview URL:** the published preview site from the build (home =
 Nocturne style).
 **Remix URL:** from the project share dialog.
+
+---
+
+## Launch post (optional — Community feed, at publish time)
+
+> Waymark is my free link-in-bio template: ten styles, one CMS.
+> Fill in your links once, preview your own page in every look —
+> dark editorial, terminal, glassy, retro — then set the winner
+> as your home page. Free, as-is; the Start here page inside is
+> the manual.

@@ -26,6 +26,10 @@ why the remix flow must be frictionless.
 - [ ] Method 1 test: re-set home to another style page → publishes correctly
 - [ ] Start here page reads cleanly and its internal links work
 - [ ] No lorem ipsum anywhere; demo content is the June Calloway set
+- [ ] Avatar image has alt text; per-page title + description set on all pages (10 styles + Start here + 404)
+- [ ] Framer performance check reviewed on the published preview; avatar image compressed
+- [ ] Unused CMS entries/fields deleted (best practice: no empty or unused entries ship)
+- [ ] Cross-sell check: paid-template mentions live ONLY on the Start here page; the Footer Badge is template attribution and removable (no ads on buyer pages)
 
 ## Publish + list
 
@@ -36,6 +40,7 @@ why the remix flow must be frictionless.
 - [ ] Price: **Free** (no Stripe step for this one)
 - [ ] Upload the 11 marketplace images from `marketplace/`
 - [ ] Submit → template is live immediately
+- [ ] Optional but Framer-recommended: publish the Community feed post with the personal message drafted in `MARKETPLACE_LISTING.md`
 - [ ] After it's live: add the listing URL to the Footer Badge link in the project and republish the preview
 - [ ] Live check: open the Marketplace page, remix it as a stranger would, confirm the Start here page is intact
 
