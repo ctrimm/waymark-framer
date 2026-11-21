@@ -1,11 +1,14 @@
 # Waymark — a free Framer link-in-bio template with ten switchable styles
 
-**Status: build package complete; the in-Framer build is the
-remaining step.** This repo is the full template package — build
+**Status: built in Framer (2026-11-21); publish + listing are the
+remaining steps.** The project was built from `FRAMER_BUILD_SPEC.md`
+in a fresh Framer project, **Waymark — Link in Bio**
+(https://framer.com/projects/ilbNe2m8lZoHDjilIuyB), and each page was
+checked against the screenshots in `marketplace/` and the
+`preview/` mock. This repo is the full template package — build
 spec, the switching guide that ships inside the template, CMS
-content, listing copy and submission checklist. Framer has no API
-for creating template projects, so the project itself gets built
-in Framer from `FRAMER_BUILD_SPEC.md` (~45–60 min).
+content, listing copy and submission checklist. What was built, and
+where it differs from the spec, is in DECISION_LOG D7.
 
 Waymark is the Framer edition of
 [astro-link-in-bio-theme](https://github.com/ctrimm/astro-link-in-bio-theme)

@@ -79,3 +79,43 @@ overriding the earlier sequence-after-paid recommendation). The
 guide's style table therefore names the paid templates without
 links; the checklist carries an aftercare step to add listing
 URLs to the Start here page once Nocturne and Wagesmith are live.
+
+## D7 — In-Framer build notes (2026-11-21)
+
+Built in a new, empty Framer project ("Waymark — Link in Bio",
+https://framer.com/projects/ilbNe2m8lZoHDjilIuyB) with the Framer
+connector, then checked page by page against `marketplace/*.png`.
+Where the build differs from the spec, and why:
+
+- **Link Button hover.** Framer won't put a hover effect on a variant's
+  root, so each variant wraps a "Surface" frame that holds the
+  styling, the link and the hover (lift 1px; Brutalist moves its
+  shadow from 4px to 6px). There are still 20 variants (10 styles,
+  each with a Highlight version). On the pages the variant comes from
+  the CMS Highlight toggle, and the Vermilion number (01–07) comes
+  from the list's item index.
+- **Socials Row props.** The Socials Row sits inside the Profile Card,
+  and the card passes its four label + link props through. Buyers
+  edit socials on the Profile Card, and switching the card's variant
+  switches its Socials Row too. The guide was updated to say this.
+- **Text Styles.** Each style has one Text Style, `<Style> / Name`
+  (the display font). UI text is set inline per variant, because one
+  fixed-size style per role × 10 looks would add 50+ near-identical
+  styles. The Start here page has its own `Guide / …` text and colour
+  styles.
+- **Backgrounds.** Framer fills take one gradient, so Glassy's aurora
+  is a linear base plus two radial glow layers, Pastel's wash is a
+  linear gradient, and Retro's 28px grid is an SVG pattern layer.
+  Each style page has a Desktop and a Phone breakpoint.
+- **Footer Badge.** A single component with a Text Color prop and a
+  Listing Link prop. The link points at the Marketplace home until
+  the listing URL exists (checklist aftercare). The badge always uses
+  Manrope; the preview mock switched it to mono on Brutalist, Dev
+  and Retro.
+- **Demo location.** It now reads "Savannah, GA", to match the mock;
+  `cms/profile.csv` was updated to the same text.
+- **Canvas linter.** Component variants are deliberately transparent
+  (they sit on each page's style background, including the gradient
+  pages), so Framer's "opaque background" / contrast warnings on the
+  component canvas are expected. The real backgrounds on the pages
+  pass.

@@ -33,11 +33,12 @@ page. Your links never move.
 
 ## Method 2 — Flip the Style variant
 
-Every building block (Profile Card, Link Button, Socials Row) has a
-**Style** property with the ten looks as variants.
+Every building block (Profile Card, Link Button, Socials Row) has the
+ten looks as variants. The Profile Card brings its Socials Row along
+when you switch it.
 
 1. Select the block on any page.
-2. In the right-hand properties panel, change **Style** from, say,
+2. In the right-hand properties panel, change its variant from, say,
    *Crumb* to *Ledger*.
 3. Do the same for the other blocks, and set the page background
    to the matching colour (each style's background hex is in the
@@ -48,9 +49,11 @@ Useful when you want one page but a different look — or a mix
 
 ## Method 3 — Make a style your own
 
-Each style is driven by named **Color Styles** and **Text Styles**
-(`Nocturne / Background`, `Nocturne / Accent`, …). Edit the style
-and every block using it updates:
+Each style is driven by named **Color Styles** (Assets → Waymark
+Colors: `Nocturne / Background`, `Nocturne / Accent`, …) and a
+**Text Style** for its display name (Assets → Waymark Text:
+`Nocturne / Name`, …). Edit the style and every block using it
+updates:
 
 - Change the accent colour to your brand colour.
 - Swap the display font (all styles use free Google fonts:
@@ -66,7 +69,7 @@ and every block using it updates:
 | Reorder links | Edit the **Sort** numbers (1 shows first) |
 | Feature a link | Turn on **Highlight** — it renders in the accent fill |
 | Change your photo | CMS → Profile → **Avatar Image** (or clear it to use initials) |
-| Change socials | Select the Socials Row → edit each button's link + label in the properties panel |
+| Change socials | Select the Profile Card → edit each Social label + link in the properties panel |
 | Remove the footer badge | Select it on your home page → Delete. No hard feelings. |
 | Custom domain | Site Settings → Site Domains (a Framer plan feature) |
 

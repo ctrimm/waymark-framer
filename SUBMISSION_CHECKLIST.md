@@ -9,24 +9,24 @@ why the remix flow must be frictionless.
 
 ## Build (from FRAMER_BUILD_SPEC.md)
 
-- [ ] CMS collections created; CSVs imported (Profile 1 item, Links 7)
-- [ ] Profile Card / Link Button / Socials Row components, all 10 Style variants
-- [ ] Color Styles created per style and applied (no raw hex on frames)
-- [ ] 10 style pages + Start here page + custom 404
-- [ ] Nocturne set as home page for the listing preview
-- [ ] All links are real (example.com demo targets, real mailto:)
-- [ ] Footer Badge present on all style pages, linked to the listing
-- [ ] Favicon + site title set
+- [x] CMS collections created; CSVs imported (Profile 1 item, Links 7)
+- [x] Profile Card / Link Button / Socials Row components, all 10 Style variants
+- [x] Color Styles created per style and applied (no raw hex on frames)
+- [x] 10 style pages + Start here page + custom 404
+- [x] Nocturne set as home page for the listing preview
+- [x] All links are real (example.com demo targets, real mailto:)
+- [x] Footer Badge present on all style pages, linked to the listing (placeholder: Marketplace home until the listing URL exists)
+- [x] Favicon + site title set
 
 ## Quality pass
 
-- [ ] Preview each style page at phone width — column centred, no overflow
+- [x] Preview each style page at phone width — column centred, no overflow
 - [ ] Switch test: edit one link label in CMS → confirm it changes on all 10 pages
 - [ ] Variant test: flip one Link Button's Style → renders correctly
 - [ ] Method 1 test: re-set home to another style page → publishes correctly
 - [ ] Start here page reads cleanly and its internal links work
 - [ ] No lorem ipsum anywhere; demo content is the June Calloway set
-- [ ] Avatar image has alt text; per-page title + description set on all pages (10 styles + Start here + 404)
+- [ ] Avatar image has alt text (set it in the CMS image when a photo is added; demo uses initials); per-page title + description set on all pages (10 styles + Start here + 404) — titles/descriptions done
 - [ ] Framer performance check reviewed on the published preview; avatar image compressed
 - [ ] Unused CMS entries/fields deleted (best practice: no empty or unused entries ship)
 - [ ] Cross-sell check: paid-template mentions live ONLY on the Start here page; the Footer Badge is template attribution and removable (no ads on buyer pages)
