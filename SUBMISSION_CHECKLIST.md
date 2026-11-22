@@ -10,9 +10,9 @@ why the remix flow must be frictionless.
 ## Status — 2026-11-21 evening (verified)
 
 - [x] Preview republished and curl-verified: https://lovely-pictogram-627853.framer.app (version d176a9a93) — / and /start return 200 with correct titles
-- [x] CMS structure audit (read-only, via Framer MCP): exactly one Profile collection (1 item) and one Links collection (7 items), no drafts; all 10 style pages bind to those same collections; no unused entries. One unused field: Profile → Email is bound nowhere (buttons use a typed mailto:) — fix-or-delete is Cory's call, tracked in the Claude handoff
+- [x] CMS structure audit (read-only, via Framer MCP): exactly one Profile collection (1 item) and one Links collection (7 items), no drafts; all 10 style pages bind to those same collections; no unused entries. Unused field Profile → Email removed (binding was not possible for both links: "Say hello" is a Links row with its own URL field), republished as version d7a20d5f4 and curl-verified; cms/SCHEMA.md + cms/profile.csv updated to match
 - [x] Demo video replaced with the style-cycling cut (8 styles, crossfades, 18.2s, 1080p) in marketplace/demo.mp4
-- [ ] Gallery badge fix pending: live-site captures carry the "Made in Framer" badge + edit button (phone shots partly covered). Recapture with the badge element removed before screenshot — in the Claude handoff
+- [x] Gallery recaptured badge-free: "Made in Framer" badge + edit button removed from the DOM before screenshot; all 11 PNGs, same filenames/sizes, each read back clean
 - [ ] Manual, Cory only: Site Settings → Staging & Versions "Optimized" status; File → Copy Remix Link; the 3 live switch tests; Submit
 
 ## Build (from FRAMER_BUILD_SPEC.md)
@@ -36,7 +36,7 @@ why the remix flow must be frictionless.
 - [ ] No lorem ipsum anywhere; demo content is the June Calloway set
 - [ ] Avatar image has alt text (set it in the CMS image when a photo is added; demo uses initials); per-page title + description set on all pages (10 styles + Start here + 404) — titles/descriptions done
 - [ ] Framer performance check reviewed on the published preview; avatar image compressed
-- [ ] Unused CMS entries/fields deleted (best practice: no empty or unused entries ship)
+- [x] Unused CMS entries/fields deleted (best practice: no empty or unused entries ship) — Profile → Email removed 2026-11-21; no unused entries
 - [ ] Cross-sell check: paid-template mentions live ONLY on the Start here page; the Footer Badge is template attribution and removable (no ads on buyer pages)
 
 ## Publish + list
