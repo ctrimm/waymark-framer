@@ -7,6 +7,14 @@ Waymark is free, so the economics here are the **referral share
 (50% of a referred Framer subscription's first year)** — which is
 why the remix flow must be frictionless.
 
+## Status — 2026-11-21 evening (verified)
+
+- [x] Preview republished and curl-verified: https://lovely-pictogram-627853.framer.app (version d176a9a93) — / and /start return 200 with correct titles
+- [x] CMS structure audit (read-only, via Framer MCP): exactly one Profile collection (1 item) and one Links collection (7 items), no drafts; all 10 style pages bind to those same collections; no unused entries. One unused field: Profile → Email is bound nowhere (buttons use a typed mailto:) — fix-or-delete is Cory's call, tracked in the Claude handoff
+- [x] Demo video replaced with the style-cycling cut (8 styles, crossfades, 18.2s, 1080p) in marketplace/demo.mp4
+- [ ] Gallery badge fix pending: live-site captures carry the "Made in Framer" badge + edit button (phone shots partly covered). Recapture with the badge element removed before screenshot — in the Claude handoff
+- [ ] Manual, Cory only: Site Settings → Staging & Versions "Optimized" status; File → Copy Remix Link; the 3 live switch tests; Submit
+
 ## Build (from FRAMER_BUILD_SPEC.md)
 
 - [x] CMS collections created; CSVs imported (Profile 1 item, Links 7)
@@ -33,7 +41,7 @@ why the remix flow must be frictionless.
 
 ## Publish + list
 
-- [ ] Publish the preview site; open the Preview URL in a private window
+- [x] Publish the preview site (done 2026-11-21, URL above); open the Preview URL in a private window — still Cory's check
 - [ ] Remix link copied from the share dialog; test it in a private window
 - [ ] Creator → New Template: name, byline, description (from MARKETPLACE_LISTING.md)
 - [ ] Categories: Link in Bio / Personal / Portfolio
