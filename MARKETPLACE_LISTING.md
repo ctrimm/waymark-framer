@@ -8,9 +8,9 @@ design language, and the in-template guide names them.
 
 ---
 
-**Name:** Waymark — Link in Bio (10 switchable styles)
+**Name:** Waymark Link in Bio
 
-**Byline:** Cory Trimm
+**Byline:** One link page, ten looks
 
 **Categories:** Link in Bio · Personal · Portfolio
 
