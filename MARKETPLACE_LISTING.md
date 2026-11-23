@@ -71,8 +71,13 @@ design language, and the in-template guide names them.
 10. `10-resume.png`
 11. `11-retro.png`
 
-**Preview URL:** the published preview site from the build (home =
-Nocturne style).
+**Preview URL:** https://lovely-pictogram-627853.framer.app (home =
+Nocturne style; republished 2026-11-23 as version 91850c14d after the
+moderation pass — every sample link resolves, mailto works).
+
+**Demo video:** do NOT upload the current `marketplace/demo.mp4` — its
+crossfades double the on-screen labels. Upload the hard-cut rebuild
+(`waymark-demo-v2-hardcut.mp4`, 18.8s) once it is committed over it.
 **Remix URL:** from the project share dialog.
 
 ---
