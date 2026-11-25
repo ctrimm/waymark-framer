@@ -118,8 +118,11 @@ Method 1.
 
 - Page load: links stagger in (fade + 8px rise, 40ms steps) on all
   styles. Keep it subtle; no other motion.
-- Every button is a real link (demo URLs point to example.com
-  paths; "Say hello" is a real mailto:).
+- Every button is a real link to a real, loading destination
+  (stable platform homepages — Cargo, INPRNT, Society6, Substack,
+  Cal.com, Vimeo, Instagram, YouTube, Pinterest); "Say hello" and the
+  Email social are a working mailto:. No example.com placeholders
+  (moderation pass, 2026-11-23).
 - Favicon: a simple signpost glyph — draw with two rotated frames
   on a square, accent yellow on black works across styles.
 - **Alt text:** the Profile avatar image carries alt text

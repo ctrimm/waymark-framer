@@ -119,3 +119,45 @@ Where the build differs from the spec, and why:
   pages), so Framer's "opaque background" / contrast warnings on the
   component canvas are expected. The real backgrounds on the pages
   pass.
+
+## D8 — Pre-submission moderation pass (2026-11-23)
+
+Framer 3.0 publishes templates instantly and moderates afterwards
+against the Template Best Practices checklist (Wagesmith was removed
+hours after publishing on Nov 22). This pass hardens Waymark before
+Cory submits it. Preview republished as version 91850c14d at
+https://lovely-pictogram-627853.framer.app. Nothing was submitted.
+
+- **Sample links.** All `example.com` placeholders are gone. Links CMS:
+  Portfolio → cargo.site, Shop prints → inprnt.com, Autumn series →
+  society6.com, The Margin → substack.com, Commissions → cal.com,
+  About & process → vimeo.com. Profile Card socials on all 10 pages →
+  instagram.com, youtube.com, pinterest.com. "Say hello" and the Email
+  social → `mailto:cory@ignitebright.com` (Cory's call: real and
+  deliverable; buyers replace it). Behance, Etsy, ArtStation and
+  Dribbble were rejected because they show bot walls (403/202) to
+  automated checkers, which a moderator's link checker would read as
+  dead. `cms/links.csv` updated to match.
+- **Interaction states.** Added a pressed state (scale 0.97) to every
+  link: all 20 Link Button variants, the Start here chips and the 404
+  button. Social chips gained hover (opacity 0.75) + pressed; footer
+  links gained hover. Applied on primary variants only, so the Phone
+  breakpoints inherit them.
+- **Verified, no change needed.** No forms exist. The custom 404 is
+  on-brand with a working link home. Every page has a title and
+  description. No images ship (the avatar uses initials), so there is
+  no alt text to write; the CMS image field takes alt text when a
+  buyer adds a photo. No unused components, styles or CMS entries.
+  No horizontal scroll at 320/390/1440px.
+- **Sweep.** 453 link instances (22 unique destinations) across 12
+  pages at three widths, 0 dead; 56 real taps at iPhone width on four
+  style pages, 0 failures.
+- **Not done in this pass.** Demo-video swap (the hard-cut file was not
+  reachable from the build session; the current crossfade cut is
+  defective and must not be uploaded). The GoReview audit (an editor
+  plugin). The remix test in a second account. These stay unchecked
+  in SUBMISSION_CHECKLIST.md.
+- **Linter notes left as-is.** Transparent component variant fills
+  (deliberate, see D7). "Siblings too close" on the Start here style
+  and task tables comes from unmeasured canvas rects; the live pages
+  render both tables correctly at every width.
